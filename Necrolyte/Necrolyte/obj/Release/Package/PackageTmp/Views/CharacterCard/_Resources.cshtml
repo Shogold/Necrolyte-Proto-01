@@ -1,0 +1,17 @@
+﻿<button class="EditMode" data-bind="click: ToggleEditMode">
+    <img src="@(Url.Content("~/Content/Images/Gear.png"))"/>
+</button>
+<img src="@(Url.Content("~/Content/Images/ImperialSeal.png"))"/>
+<div data-bind="foreach: Collection"style="clear:both;">
+    <div class="Stacker" style="text-align: right;">
+        <input type="text" style="width:60%" data-bind="value: Name, visible: $parent.EditMode" />
+        <span data-bind="text: Name, visible: !$parent.EditMode()"></span>
+        <div class="Incrementer">
+            <button data-bind="click: IncreaseValue"> + </button>
+            <input type="text" data-bind="value: Value" />
+            <button data-bind="click: DecreaseValue"> - </button>
+        </div>
+        <button data-bind="click: $parent.Remove, visible: $parent.EditMode"">X</button>
+    </div>
+</div>
+<button style="width: 100%;" data-bind="click: Add, visible: EditMode">+</button>

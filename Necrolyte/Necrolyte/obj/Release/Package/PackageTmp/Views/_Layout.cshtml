@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/bundles/scripts")
+    @RenderSection("Scripts", required: false)
+	<link href="@Styles.Url("~/bundles/styles")" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+		<div class="PageHeader">
+            <div>
+			    <img src="@(Url.Content("~/Content/Images/Necrolyte-logo.png"))" class="PageLogo"/>
+            </div>
+            <div class="SiteNavigation">
+                <ul>
+                    <li onclick="window.location = '@Url.Action("Index", "Home")'">Home</li>
+                    <li onclick="window.location = '@Url.Action("AboutUs", "Home")'">About Us</li>
+                    <li onclick="window.location = '@Url.Action("Index", "Dice")'">Dice</li>
+                    <li onclick="window.location = '@Url.Action("Index", "CharacterCard")'">Character Card</li>
+                    <li onclick="window.location = '@Url.Action("Index", "Codex")'">Codex</li>
+                </ul>
+            </div>
+            <div style="clear: both;"></div>
+		</div>
+		<div class="PageContent">
+            @RenderBody()
+		</div>
+</body>
+</html>

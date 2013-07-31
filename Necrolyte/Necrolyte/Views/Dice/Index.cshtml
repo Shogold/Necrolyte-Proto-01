@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Necrolyte: Dice";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@section Scripts {    
+    <script src='@Scripts.Url("~/bundles/scripts/dice")'> </script>
+}
+
+<div style="margin-bottom: 2em;">
+	<input type="button" value="Add Die Bag" data-bind="click: CreateNewDieBag"/>		
+    
+    <div style="float:right">
+        <form action="@Url.Action("Load", "JSONFile")" method="post">
+            <div style="width: 0; height: 0; overflow: hidden; display: inline-block; visibility:hidden; position:absolute;">
+                <input id="DiceLoad" type="file" name="file" onchange="$(this).closest('form').submit();" />
+            </div>
+            <input type="button" value="Load" onclick="$('#DiceLoad').click();" />
+        </form>
+    </div>		
+    <div style="float:right; margin-right: 1em;">
+        <button onclick="CurrentViewModel.Save('@Url.Action("Save", "JSONFile")')">Save</button>
+    </div>
+</div>
+<div data-bind="foreach: DiceBags">			
+	<fieldset class="PageFieldSet DieBag" data-bind="style: {backgroundColor: BGColor}">
+        <input type="hidden" data-bind="value:GUID"/>
+		<legend>
+			<span data-bind="if:IsEditMode"><input  data-bind="value: Name" /></span>
+			<span data-bind="ifnot:IsEditMode"><span data-bind="text:Name"/></span>
+		</legend>
+        <input type="button" style="position: absolute; left:0em;top:.15em;" value="X" data-bind="click: $parent.Remove, visible: IsEditMode"/>
+		<input type="button" style="width: 4em; height: 3em;" value="Roll" class="Button" data-bind="click: RollDice"/>
+        <button class="EditMode" data-bind="click: ToggleEditMode">
+            <img src="@(Url.Content("~/Content/Images/Gear.png"))"/>
+        </button>
+					
+		<span data-bind="visible:IsEditMode">
+			<select data-bind="options: $root.DieTemplates, value: SelectedDieTemplate, optionsText: 'Name'"></select>
+			<input type="button" value="+" data-bind="click: AddDie"/>
+		</span>
+		<div data-bind="foreach: Dice">
+			<div data-bind="click: ToggleSelection, css: {Selected: IsSelected}" class="Die">
+				<div style="position: relative; height:100%; width: 100%; display: table;">
+					<div data-bind="text: MaxValue" style="font-size:.5em; position: absolute; right: .25em; top: .25em;"></div>
+					<div data-bind="text: MinValue" style="font-size:.5em; position: absolute; left: .25em; top: .25em;"></div>
+					<div data-bind="text: Value" style="display: table-cell; text-align: center; vertical-align: middle;"></div>
+                    
+					<input style="font-size:.5em; position: absolute; left: 0; right: 0; bottom: .1em; padding: 1em;" type="button" value="delete" data-bind="click: $parent.DeleteDie, visible: $parent.IsEditMode()"/>
+				</div>
+			</div>
+		</div>
+		<div style="clear:both">
+			Dice Total: <span data-bind="text: DiceTotal" />
+		</div>			
+	</fieldset>
+</div>
+<div style="clear:both;">
+</div>
+<div class="Accordian" style="margin-top:2em;">
+    <input type="checkbox" id="DieTemplateEditor"/>
+    <label for="DieTemplateEditor">
+        Die Template Editor
+    </label>
+    <section>
+	        <select data-bind="options: $root.DieTemplates, value: SelectedDieTemplateForEditing, optionsText: 'Name'"></select>
+	        <input type="button" value="+" data-bind="click: CreateNewDieTemplate"/>
+	        <input type="button" value="-" data-bind="click: RemoveDieTemplate"/>
+	        <br/>
+				
+	        Name: <br/><input type="text" data-bind="value: SelectedDieTemplateForEditing().Name" /><br/>
+	        Range<br/>				
+	        From: <br/><input type="text" data-bind="value: SelectedDieTemplateForEditing().MinValue" /><br/>
+	        To: <br/><input type="text" data-bind="value: SelectedDieTemplateForEditing().MaxValue" /><br/>
+    </section>
+</div>

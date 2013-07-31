@@ -1,0 +1,31 @@
+﻿<button class="EditMode" data-bind="click: ToggleEditMode">
+    <img src="@(Url.Content("~/Content/Images/Gear.png"))"/>
+</button>
+<img src="@(Url.Content("~/Content/Images/Character.png"))"/>
+<div>
+    <input type="text" data-bind="value: Name, visible: EditMode"/>
+    <div class="CharacterName" data-bind="text: Name, visible: !EditMode()"></div>
+</div>
+<div class="DivPairs">
+    <div>
+        <div class="Title">Chapter:</div>
+        <input type="text" data-bind="value: Chapter, visible: EditMode"/>
+        <span data-bind="text: Chapter, visible: !EditMode()"></span>
+    </div>
+    <div>
+        <div class="Title">Speciality:</div>
+        <input type="text" data-bind="value: Speciality, visible: EditMode"/>
+        <span data-bind="text: Speciality, visible: !EditMode()"></span>
+    </div>
+    <div>
+        <div class="Title">Demeanour:</div>
+        <input type="text" data-bind="value: Demeanour, visible: EditMode"/>
+        <span data-bind="text: Demeanour, visible: !EditMode()"></span>
+    </div>
+</div>
+<br />
+<div>
+    <span class="Title">Biography:</span>
+    <textarea data-bind="value: Biography, visible: EditMode"></textarea>
+    <span data-bind="text: Biography, visible: !EditMode()"></span>
+</div>

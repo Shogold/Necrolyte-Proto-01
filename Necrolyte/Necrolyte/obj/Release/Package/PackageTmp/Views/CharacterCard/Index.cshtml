@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/scripts/characterCard")
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            CurrentViewModel = new CharacterCard();
+            ko.applyBindings(CurrentViewModel);
+
+            $('form').ajaxForm(function (data)
+            {
+                CurrentViewModel.Load(data);
+            });
+        });
+    </script>
+}
+<div class="CharacterCard">
+    <input data-bind="value: EquationTester" />
+    <span data-bind="text: EquationTesterResults"></span>
+    <div>
+        <div style="float:left">
+            <button onclick="CurrentViewModel.Save('@Url.Action("Save", "JSONFile")')">Save</button>
+        </div>
+        <div style="float:right">
+            <form action="@Url.Action("Load", "JSONFile")" method="post">
+                <input type="file" name="file" />
+                <input type="submit" value="Load" />
+            </form>
+        </div>
+    </div>
+    <div class="Corner" data-bind="with: Attributes">
+        @Html.Partial("_Attributes")
+    </div>
+    <div class="Corner" data-bind="with: Resources">
+        @Html.Partial("_Resources")
+    </div>
+    <span style="clear: both;"></span>
+    <div class="Left" data-bind="with: Weapons">
+        @Html.Partial("_Weapons")
+    </div>
+    <div class="Center" data-bind="with: CharacterDescription">
+        @Html.Partial("_CharacterDescription")
+    </div>
+    <div class="Right">
+    </div>
+    <span style="clear: both;"></span>
+    <div class="Corner" data-bind="with: Traits">
+        @Html.Partial("_Traits")
+    </div>
+    <div class="Corner Debug"></div>
+    <div style="clear: both;"></div>
+</div>

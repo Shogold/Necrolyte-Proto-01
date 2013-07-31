@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/scripts/codex")
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            CurrentViewModel = new Codex();
+            ko.applyBindings(CurrentViewModel);
+
+            $('form').ajaxForm(function (data)
+            {
+                CurrentViewModel.Load(data);
+            });
+        });
+    </script>
+}
+
+<h2>Codex</h2>
+<div>
+    <div>
+        <div style="float:left">
+            <button onclick="CurrentViewModel.Save('@Url.Action("Save", "JSONFile")')">Save</button>
+        </div>
+        <div style="float:right">
+            <form action="@Url.Action("Load", "JSONFile")" method="post">
+                <input type="file" name="file" />
+                <input type="submit" value="Load" />
+            </form>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="Corner" data-bind="with: Traits">
+        <button class="EditMode" data-bind="click: ToggleEditMode">
+            <img src="@(Url.Content("~/Content/Images/Gear.png"))"/>
+        </button>
+        <img src="@(Url.Content("~/Content/Images/Trait.png"))"/>
+        <div style="clear: both;" data-bind="foreach: Collection">
+            <div class="Accordian">
+                <input type="radio" data-bind="attr: { id: ID }" name="TraitAccordian" checked="checked" />
+                <label style="position:relative;" data-bind="attr: { for: ID }">
+                    <input type="text" data-bind="value: Name, visible: $parent.EditMode" />
+                    <span data-bind="text: Name, visible: !$parent.EditMode()"></span>
+
+                    <input type="button" style="position: absolute; right: .35em; top: .35em;" value="X" data-bind="click: $parent.Remove, visible: $parent.EditMode" />
+                </label>
+                <section style="position:relative">
+                    <textarea style="width: 100%;" data-bind="value: Value, visible: $parent.EditMode"></textarea>
+                    <span data-bind="text: Value, visible: !$parent.EditMode()"></span>
+                </section>
+            </div>
+        </div>
+        <button style="width: 100%;" data-bind="click: Add, visible: EditMode">+</button>
+    </div>
+</div>

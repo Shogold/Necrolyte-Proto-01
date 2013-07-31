@@ -1,0 +1,12 @@
+﻿<div class="Debug">
+    <div>
+        <div class="Title">Name:</div>
+        <input type="text" data-bind="value: Name, visible: $parent.EditMode" />
+        <span data-bind="text: Name, visible: !$parent.EditMode()"></span>
+    </div>
+    <div>
+        <div class="Title">Description:</div>
+        <input type="text" data-bind="value: Description, visible: $parent.EditMode" />
+        <span data-bind="text: Description, visible: !$parent.EditMode()"></span>
+    </div>
+</div>

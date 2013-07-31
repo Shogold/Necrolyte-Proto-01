@@ -1,0 +1,100 @@
+﻿<button class="EditMode" data-bind="click: ToggleEditMode">
+    <img src="@(Url.Content("~/Content/Images/Gear.png"))"/>
+</button>
+<img src="@(Url.Content("~/Content/Images/Weapon.png"))"/>
+<div style="clear: both;" data-bind="foreach: Collection">
+    <div class="Weapon Accordian" style="position: relative;">
+        <input type="radio" data-bind="attr: { id: ID }" name="WeaponAccordian" checked="checked"/>
+        <label data-bind="attr: { for: ID }">
+            <input type="text" data-bind="value: Name, visible: $parent.EditMode"/>
+            <span data-bind="text: Name, visible: !$parent.EditMode()"></span>
+        </label>
+        <section>
+            <div class="DivPairs">
+                <div>
+                    <span class="Title">Class:</span>
+                    <input type="text" data-bind="value: Class, visible: $parent.EditMode"/>
+                    <span data-bind="text: Class, visible: !$parent.EditMode()"></span>
+                </div>
+                <div>
+                    <span class="Title">Damage:</span>
+                    <input type="text" data-bind="value: Damage, visible: $parent.EditMode"/>
+                    <span data-bind="text: Damage, visible: !$parent.EditMode()"></span>
+                </div>
+            </div>
+            <div class="WeaponSubsection">
+                <div class="Title">Fire Mode:</div>
+                <select style="width: 75%;" data-bind="options: FireModes, 
+                                    optionsText: function(item) { 
+                                        return item.Name() + ' (RoF: ' + item.RateOfFire() + ')' 
+                                    }, 
+                                    value: SelectedFireMode"></select>
+                <button data-bind="click: AddFireMode, visible: $parent.EditMode"> + </button>
+                <button data-bind="click: RemoveFireMode, visible: $parent.EditMode() && FireModes().length > 1"> - </button>
+                <div class="DivPairs SubsectionDetails" data-bind="with: SelectedFireMode">
+                    <div>
+                        <span class="Title">Name:</span>
+                        <input type="text" data-bind="value: Name, visible: $parentContext.$parent.EditMode"/>
+                        <span data-bind="text: Name, visible: !$parentContext.$parent.EditMode()"></span>
+                    </div>
+                    <div>
+                        <span class="Title">Rate of Fire:</span>
+                        <input type="text" data-bind="value: RateOfFire, visible: $parentContext.$parent.EditMode"/>
+                        <span data-bind="text: RateOfFire, visible: !$parentContext.$parent.EditMode()"></span>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="WeaponSubsection">
+                <div class="Title">Magazine Type:</div>
+                <select style="width: 75%;" data-bind="options: MagazineTypes, 
+                                    optionsText: function(item) { 
+                                        return item.Name() + ' (Cap.: ' + item.Capacity() + ')' 
+                                    }, 
+                                    value: SelectedMagazineType"></select>
+                <button data-bind="click: AddMagazineType, visible: $parent.EditMode"> + </button>
+                <button data-bind="click: RemoveMagazineType, visible: $parent.EditMode() && MagazineTypes().length > 1"> - </button>
+                <div class="DivPairs SubsectionDetails" data-bind="with: SelectedMagazineType">
+                    <div>
+                        <span class="Title">Name:</span>
+                        <input type="text" data-bind="value: Name, visible: $parentContext.$parent.EditMode"/>
+                        <span data-bind="text: Name, visible: !$parentContext.$parent.EditMode()"></span>
+                    </div>
+                    <div>
+                        <span class="Title">Capacity:</span>
+                        <input type="text" data-bind="value: Capacity, visible: $parentContext.$parent.EditMode"/>
+                        <span data-bind="text: Capacity, visible: !$parentContext.$parent.EditMode()"></span>
+                    </div>
+                    <div>
+                        <span class="Title">Quantity:</span>
+                        <input type="text" data-bind="value: Count, visible: $parentContext.$parent.EditMode"/>
+                        <span data-bind="text: Count, visible: !$parentContext.$parent.EditMode()"></span>
+                    </div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div>
+                <div class="Title">Additional Info:</div>
+                <textarea data-bind="value: AdditionalInformation, visible: $parent.EditMode"></textarea>
+            </div>
+            <div>
+                <img style="vertical-align: middle;" src="@(Url.Content("~/Content/Images/Magazine.png"))"/>
+                <div class="Incrementer">
+                    <button data-bind="click: IncreaseMagazines, visible: $parent.EditMode"> + </button>
+                    <input type="text" data-bind="value: SelectedMagazineType().Count" />
+                    <button data-bind="click: DecreaseMagazines, visible: $parent.EditMode"> - </button>
+                </div>
+                <img style="vertical-align: middle;" src="@(Url.Content("~/Content/Images/Bullets.png"))"/>
+                <div class="Incrementer">
+                    <button data-bind="click: IncreaseCurrentMagazine, visible: $parent.EditMode"> + </button>
+                    <input type="text" data-bind="value: CurrentMagazine" />
+                    <button data-bind="click: DecreaseCurrentMagazine, visible: $parent.EditMode"> - </button>
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button style="vertical-align: middle;" data-bind="click: Reload"><img src="@(Url.Content("~/Content/Images/Reload.png"))"/></button>
+                <button style="vertical-align: middle;" data-bind="click: Fire"><img src="@(Url.Content("~/Content/Images/Fire.png"))"/></button>
+            </div>
+        </section>
+    </div>
+</div>
+<button style="width: 100%;" data-bind="click: Add, visible: EditMode">+</button>

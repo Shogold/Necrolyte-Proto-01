@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>04/03/2013 16:10:09</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/03/2013 16:10:00</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/03/2013 16:10:07</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>04/03/2013 16:10:09</publishTime>
+    </File>
+    <File Include="bin/Necrolyte.dll">
+      <publishTime>05/08/2013 15:37:30</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/03/2013 16:10:07</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Abstractions.dll">
+      <publishTime>07/09/2012 00:40:10</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>04/03/2013 16:10:09</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/03/2013 16:10:09</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/03/2013 16:10:07</publishTime>
+    </File>
+    <File Include="bin/System.Web.Routing.dll">
+      <publishTime>07/09/2012 00:40:10</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/03/2013 16:10:08</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/03/2013 16:10:10</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>04/03/2013 16:10:09</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>04/03/2013 16:10:09</publishTime>
+    </File>
+    <File Include="Content/Images/Bullets.png">
+      <publishTime>04/18/2013 11:55:08</publishTime>
+    </File>
+    <File Include="Content/Images/Character.png">
+      <publishTime>04/21/2013 16:33:37</publishTime>
+    </File>
+    <File Include="Content/Images/Fire.png">
+      <publishTime>04/18/2013 20:24:41</publishTime>
+    </File>
+    <File Include="Content/Images/Fist.png">
+      <publishTime>04/21/2013 20:16:47</publishTime>
+    </File>
+    <File Include="Content/Images/Gear.png">
+      <publishTime>04/03/2013 16:48:12</publishTime>
+    </File>
+    <File Include="Content/Images/ImperialSeal.png">
+      <publishTime>04/21/2013 23:41:42</publishTime>
+    </File>
+    <File Include="Content/Images/jquery.minicolors.png">
+      <publishTime>04/06/2013 15:09:52</publishTime>
+    </File>
+    <File Include="Content/Images/Magazine.png">
+      <publishTime>04/18/2013 11:55:08</publishTime>
+    </File>
+    <File Include="Content/Images/Necrolyte-logo.png">
+      <publishTime>04/03/2013 16:48:12</publishTime>
+    </File>
+    <File Include="Content/Images/Reload.png">
+      <publishTime>04/18/2013 19:57:39</publishTime>
+    </File>
+    <File Include="Content/Images/Trait.png">
+      <publishTime>04/21/2013 23:41:40</publishTime>
+    </File>
+    <File Include="Content/Images/Weapon.png">
+      <publishTime>04/19/2013 22:39:05</publishTime>
+    </File>
+    <File Include="Content/jquery.minicolors.css">
+      <publishTime>04/06/2013 15:09:42</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_diagonals-small_50_262626_40x40.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_flat_0_303030_40x100.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_flat_0_4c4c4c_40x100.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_glass_40_0a0a0a_1x400.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_glass_55_f1fbe5_1x400.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_glass_60_000000_1x400.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_gloss-wave_55_000000_500x100.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_gloss-wave_85_69b70b_500x100.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-bg_gloss-wave_95_f6ecd5_500x100.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-icons_000000_256x240.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-icons_1f1f1f_256x240.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-icons_9fda58_256x240.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-icons_b8ec79_256x240.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/images/ui-icons_ffffff_256x240.png">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/jQueryUI/jquery-ui-1.8.18.custom.css">
+      <publishTime>04/03/2013 16:30:21</publishTime>
+    </File>
+    <File Include="Content/Necrolyte.css">
+      <publishTime>05/08/2013 18:12:10</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/03/2013 16:09:56</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/03/2013 16:09:56</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/03/2013 16:10:11</publishTime>
+    </File>
+    <File Include="Scripts/CharacterCardViewModel.js">
+      <publishTime>05/06/2013 18:15:18</publishTime>
+    </File>
+    <File Include="Scripts/Codex.js">
+      <publishTime>05/06/2013 18:32:14</publishTime>
+    </File>
+    <File Include="Scripts/DiceViewModel.js">
+      <publishTime>05/08/2013 18:30:22</publishTime>
+    </File>
+    <File Include="Scripts/jquery-ui-1.8.18.custom.js">
+      <publishTime>04/03/2013 16:29:47</publishTime>
+    </File>
+    <File Include="Scripts/jquery.fileDownload.js">
+      <publishTime>04/20/2013 13:50:49</publishTime>
+    </File>
+    <File Include="Scripts/jquery.form.js">
+      <publishTime>04/20/2013 13:17:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.js">
+      <publishTime>04/06/2013 14:51:12</publishTime>
+    </File>
+    <File Include="Scripts/jquery.minicolors.js">
+      <publishTime>04/06/2013 15:09:21</publishTime>
+    </File>
+    <File Include="Scripts/knockout-2.2.1.js">
+      <publishTime>04/03/2013 16:29:47</publishTime>
+    </File>
+    <File Include="Scripts/knockout.mapping-latest.js">
+      <publishTime>04/03/2013 16:29:47</publishTime>
+    </File>
+    <File Include="Scripts/owenge.equation-beta.js">
+      <publishTime>05/06/2013 16:53:15</publishTime>
+    </File>
+    <File Include="Scripts/Util.js">
+      <publishTime>05/06/2013 18:10:56</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/Index.cshtml">
+      <publishTime>05/08/2013 16:10:34</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/_Attributes.cshtml">
+      <publishTime>04/27/2013 16:17:49</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/_CharacterDescription.cshtml">
+      <publishTime>04/21/2013 22:23:51</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/_Effect.cshtml">
+      <publishTime>04/23/2013 14:43:23</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/_Resources.cshtml">
+      <publishTime>04/27/2013 16:17:47</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/_Traits.cshtml">
+      <publishTime>04/27/2013 16:17:36</publishTime>
+    </File>
+    <File Include="Views/CharacterCard/_Weapons.cshtml">
+      <publishTime>05/08/2013 18:34:45</publishTime>
+    </File>
+    <File Include="Views/Codex/Index.cshtml">
+      <publishTime>05/06/2013 18:35:28</publishTime>
+    </File>
+    <File Include="Views/Dice/Index.cshtml">
+      <publishTime>05/08/2013 19:00:31</publishTime>
+    </File>
+    <File Include="Views/Home/AboutUs.cshtml">
+      <publishTime>04/05/2013 20:24:45</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/05/2013 19:33:42</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/03/2013 16:09:56</publishTime>
+    </File>
+    <File Include="Views/_Layout.cshtml">
+      <publishTime>05/08/2013 17:32:52</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/08/2013 19:00:40</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

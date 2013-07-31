@@ -1,0 +1,374 @@
+@CHARSET "ISO-8859-1";
+
+body
+{
+	background-color: #2C2C2C;
+	color: #BCBCBC;
+	font-family:helvetica;
+}
+input[type=submit],
+input[type=button], button
+{
+	border: 0px solid #1C1C1C;
+	border-radius: 4px;
+	background-color:#4A4A4A;	
+	color: #BCBCBC;
+	box-shadow: 0px 0px 5px #888888 inset;
+	padding: .25em .5em;
+    margin: 0;
+	font-weight: bold;	
+	font-family:helvetica;
+}
+input[type=submit]:hover,
+input[type=button]:hover, button:hover
+{
+	background-color:#6A6A6A;	
+}
+input[type=submit]:active,
+input[type=button]:active, button:active
+{
+	background-color:#3A3A3A;	
+}
+textarea,
+input[type=text],
+select
+{
+    border: 0px solid black;
+    background-color: #BCBCBC;	
+	color: #303030;
+    padding:.25em;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */        
+}
+
+.Die
+{
+	width: 45px;
+	height: 45px;
+	border: 1px solid #111111;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 3px;
+	float:left;
+}
+.Selected 
+{
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+}
+.PageFieldSet
+{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	width:49%;
+	float: left;
+	padding: 1em;
+	border: solid 1px black;
+	position: relative;
+}
+.PageFieldSet legend
+{
+	height: 1.5em;
+}
+.DieTemplateEditor input[type=text]
+{
+	width: 100%;
+}
+.EditModeButton
+{
+	position: absolute;
+	right: .5em;
+	top: 1em;
+	padding: .2em;
+}
+.EditModeBG
+{
+	background-color: #2C2C2C;
+	-moz-box-shadow: 0px 0px 6px #0AEF00;
+	-webkit-box-shadow: 0px 0px 6px #0AEF00;
+	box-shadow: 0px 0px 6px #0AEF00;
+	border-radius: 5px;
+}
+.PageLogo
+{
+	width:10em;
+	height:4em;
+    float: left;
+}
+.SiteNavigation
+{
+}
+.SiteNavigation ul
+{
+    float:left;
+    padding-top:2em;
+    margin:0;
+    list-style-type:none;
+}
+.SiteNavigation li:hover, .SiteNavigation li:active 
+{
+	-moz-box-shadow: 0px 0px 6px #0AEF00;
+	-webkit-box-shadow: 0px 0px 6px #0AEF00;
+	box-shadow: 0px 0px 6px #0AEF00;
+}
+.SiteNavigation li
+{
+    display: inline-block;
+    margin:.25em;
+    padding: .25em .5em;
+    float:left;
+	color: #BCBCBC;
+	border-radius: 5px;
+	background-color:#3A3A3A;
+    text-align: center;
+    cursor: pointer;  
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */  
+}
+.PageHeader
+{
+	margin: .5em 1.5em;
+}
+.PageContent
+{
+	margin: 0em 6.5em;
+	background-color:#3A3A3A;
+	padding: 1em;
+    max-width: 1000px;
+}
+.GUID
+{
+    display:none;
+}
+.Debug
+{
+    border: 1px solid black;
+}
+
+.DivPairs > div
+{
+    float: left;
+    width: 50%;
+    margin-bottom: .5em;
+}
+
+.DivPairs > div > input
+{
+    width: 96%;
+}
+
+.Incrementer
+{
+    line-height: 0;
+    width: 3em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Incrementer input, .Incrementer button
+{
+    margin: 0px;
+    width: 100%;
+}
+
+.Incrementer button
+{
+    height: 1.5em;
+}
+.Incrementer button:first-of-type
+{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.Incrementer button:last-of-type
+{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.EditMode
+{
+     float: right;
+     padding: 3px;
+}
+
+.CharacterCard
+{
+}
+
+.CharacterCard > div
+{
+    font-size: .75em;
+    overflow: auto;
+    background-color: #424242;    
+	border: solid 1px #3A3A3A;
+    padding: 1em;
+}
+
+.CharacterCard .Title
+{
+        font-weight: bold;
+        color: white;
+}
+.CharacterCard div
+{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */        
+}
+
+.CharacterCard .Stacker
+{
+    width: 32%;
+    float: left;
+}
+
+.CharacterCard .HorizSplit
+{
+    width: 50%;
+    float: left;
+    height: 100%;
+    overflow: auto;
+}
+.CharacterCard .HorizSplit:first-of-type
+{
+	border-right: solid 1px #3A3A3A;
+}
+.CharacterCard .HorizSplit:last-of-type
+{
+	border-left: solid 1px #3A3A3A;
+}
+
+.CharacterCard .Corner
+{
+    float: left;
+    width: 50%;
+    height:15em;
+}
+.CharacterCard .TopRight
+{
+    width: 50%;
+    height:15em;
+}
+
+.CharacterCard .Left
+{
+    float: left;
+    width: 33.3333%;
+    height:45em;
+}
+
+.CharacterCard .Center
+{
+    float: left;
+    width: 33.3333%;
+    height:45em;
+}
+
+.CharacterCard .Right
+{
+    float: right;
+    width: 33.3333%;
+    height:45em;
+}
+
+.CharacterCard .Bottom
+{
+    clear: both;
+    width: 100%;
+    height:15em;
+}
+
+.Accordian
+{
+}
+.Accordian label
+{
+    background-color: #1B1B1B;
+    padding: .5em;
+    display: block;
+    border: 1px solid #3A3A3A;
+    border-bottom-width: 0;
+    color: white;
+}
+.Accordian label:hover,
+.Accordian input:checked ~ label
+{
+	-moz-box-shadow: 0px 0px 6px #0AEF00 inset;
+	-webkit-box-shadow: 0px 0px 6px #0AEF00 inset;
+	box-shadow: 0px 0px 6px #0AEF00 inset;
+}
+.Accordian > input
+{
+    display: none;
+}
+.Accordian section
+{
+    display: none;
+    border: 1px solid #1B1B1B;
+    border-top-width: 0;
+    padding: .25em;
+}
+.Accordian input:checked ~ section
+{
+    display: block;
+}
+.WeaponSubsection
+{
+        margin-bottom: 1em;
+        margin-top: 1em;
+}
+.SubsectionDetails
+{
+    margin-left: 1em; 
+    font-size: .85em;
+}
+.CharacterName
+{
+    font-size: 1.25em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1em;
+}
+@media screen and (max-width: 600px) 
+{  
+	.PageHeader
+	{
+		margin: .5em auto;
+	}
+	.PageContent
+	{
+		margin: 0em;
+		background-color:#3A3A3A;
+		padding: .5em;
+	}
+	.PageFieldSet
+	{
+		width:100%;
+	}
+    .PageLogo
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        float:none;
+        width: 15em;
+        height: 6em;
+    }
+    .SiteNavigation li
+    {
+        padding: .5em;
+        width: 32.33333%;
+        margin:.5%;
+    }
+    .SiteNavigation ul
+    {
+         width: 100%;
+         padding: 0;
+    }
+}
